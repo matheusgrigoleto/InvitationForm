@@ -1,0 +1,16 @@
+@import url(./fields/index.css);
+
+h1 {
+  color: var(--text-color-heading);
+  font: var(--text-heading);
+}
+
+form {
+  margin-top: 3rem;
+}
+
+fieldset {
+  border: none;
+  display: grid;
+  gap: 1.5rem;
+}

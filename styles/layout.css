@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: 32.78% 66.22%;
 
-  gap: 1.25rem;
+  gap: 1rem;
+  width: 100vw;
   height: 100vh;
 
   & main {
@@ -17,12 +18,21 @@
 }
 
 main {
+  width: 100%;
   padding: 1.25rem;
   overflow: auto;
+
+  & .container-main {
+    padding: 5rem;
+    background-color: var(--shape-body);
+    height: auto;
+    border-radius: 12px;
+  }
 }
 
 aside {
   padding: 1.25rem;
+
   & .container-aside {
     width: 100%;
     height: 100%;
@@ -34,19 +44,19 @@ aside {
       padding: 2rem;
 
       & img {
-      margin-bottom: 1rem;
-      width: 2.5rem;
-      height: 2.5rem;
+        margin-bottom: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
       }
 
       & h1 {
         font: var(--text-logo);
-        color: #FF598B;
+        color: #ff598b;
       }
 
       & p {
         font: var(--text-body);
-        color: var(--text-color-heading)
+        color: var(--text-color-heading);
       }
     }
   }
