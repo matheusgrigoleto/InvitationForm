@@ -48,3 +48,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: var(--input-stroke);
+  margin: 1rem 0;
+}
