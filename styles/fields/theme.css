@@ -1,0 +1,39 @@
+.event-theme {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.event-theme input[type="radio"] {
+  display: none;
+}
+
+.option-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  outline: 1px solid var(--input-stroke);
+  cursor: pointer;
+  text-align: center;
+}
+
+.option-card img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.option-card span {
+  font: var(--text-body);
+  color: var(--text-color-heading);
+}
+
+
+.event-theme input[type="radio"]:checked + .option-card {
+  border-color: var(--brand-light);
+}
