@@ -1,0 +1,102 @@
+.flex {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font: var(--text-body);
+  color: var(--text-color-heading);
+}
+
+.switch-container input[type="checkbox"] {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  width: 4rem;
+  height: 2rem;
+  background-color: var(--input-base);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.slider {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.6rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: var(--input-stroke);
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked + .switch {
+  background-color: var(--brand-light);
+}
+
+input[type="checkbox"]:checked + .switch .slider {
+  transform: translateX(24px);
+  background-color: var(--text-color-heading);
+}
+
+.switch-container input[type="checkbox"] ~ .theme-label::before {
+  content: "Escuro";
+}
+
+.switch-container input[type="checkbox"]:checked ~ .theme-label::before {
+  content: "Claro";
+}
+
+.theme-label {
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.file-input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+input[type="file"]::file-selector-button {
+  width: 50%;
+  opacity: 0;
+  cursor: pointer;
+  border: none;
+}
+
+input[type="file"] {
+  position: relative;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--input-placeholder);
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+input[type="file"]:valid {
+  color: var(--text-color-heading);
+}
+
+.custom-button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--shape-button);
+  color: var(--text-color-heading);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  pointer-events: none;
+  z-index: 1;
+}
+
