@@ -100,3 +100,7 @@ input[type="file"]:valid {
   z-index: 1;
 }
 
+.file-input-wrapper:hover .custom-button-overlay {
+  cursor: pointer;
+  background-color: var(--shape-hover);
+}
