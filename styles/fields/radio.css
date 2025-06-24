@@ -17,7 +17,7 @@
   display: inline-flex;
   border-radius: 0.5rem;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   width: 100%;
   gap: 0.5rem;
   padding: 0.5rem;
@@ -33,15 +33,12 @@
   padding: 0.5rem;
 }
 
-.mode-toggle input[type="radio"]:checked + label svg path{
+.mode-toggle input[type="radio"]:checked + label svg path {
   fill: var(--brand-light);
 }
 
-
-.mode-toggle svg{
+.mode-toggle svg {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
 }
-
-

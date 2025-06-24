@@ -1,0 +1,67 @@
+.title-wrapper:has([disabled]) {
+  opacity: 0.5;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="datetime-local"] {
+  &[disabled] {
+    background-color: var(--danger);
+    border: 1px solid var(--danger);
+
+    color: var(--danger);
+  }
+
+  &:invalid {
+    border: 0.124rem solid var(--danger);
+  }
+
+  & + small {
+    font: var(--text-body-sm);
+    color: var(--danger);
+
+    display: inline-block;
+    margin-top: 0.25rem;
+  }
+
+  &[required] + .error {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    font: var(--text-body-sm);
+    color: var(--danger);
+
+    margin-top: 0.25rem;
+  }
+
+  &:valid + .error {
+    visibility: hidden;
+  }
+}
+
+input[type="file"] {
+  & + small {
+    font: var(--text-body-sm);
+    color: var(--danger);
+
+    display: inline-block;
+    margin-top: 0.25rem;
+  }
+
+  &[required] + .error {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    font: var(--text-body-sm);
+    color: var(--danger);
+
+    margin-top: 0.25rem;
+  }
+
+  &:valid ~ .error {
+    visibility: hidden;
+  }
+}
